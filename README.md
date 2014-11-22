@@ -21,12 +21,15 @@ Folder setup:
 The default folder name is "UCI HAR Dataset". If you name the folder of dataset with different name, you can change the variable "dataFolderName" at the very first beginning of the script.
 Please do not change any files' names or folders' names within the dataset folder. Please keep the folder structure. The folder structure is described as bellow:
 
--[ ] /UCI HAR Dataset
-  -[ ] activity_labels.txt
-  -[ ] features.txt
-  -[ ] features_info.txt
-  -[ ] README.txt
-  -[ ] /train
+* /UCI HAR Dataset
+  * activity_labels.txt
+  * features.txt
+  * features_info.txt
+  * README.txt
+  * /train
+  
+  
+  
 subject_train.txt
 X_train.txt
 y_train.txt
