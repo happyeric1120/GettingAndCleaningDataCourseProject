@@ -27,18 +27,15 @@ Please do not change any files' names or folders' names within the dataset folde
   * features_info.txt
   * README.txt
   * /train
-  
-  
-  
-subject_train.txt
-X_train.txt
-y_train.txt
-/Inertial Signals
-/test
-subject_test.txt
-X_test.txt
-y_test.txt
-Inertial Signals
+    * subject_train.txt
+    * X_train.txt
+    * y_train.txt
+    * /Inertial Signals
+  * /test
+    * subject_test.txt
+    * X_test.txt
+    * y_test.txt
+    * Inertial Signals
            
 The script will also ask you if the dplyr package is installed in your R. If so, you can answer "yes" and the speed of creating the tidy data will be faster. 
 
