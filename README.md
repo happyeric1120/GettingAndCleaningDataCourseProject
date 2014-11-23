@@ -1,25 +1,29 @@
 Getting And Cleaning Data Course Project
 ========================================
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The data is from Human Activity Recognition Using Smartphone Data Set, UCI Machine Learning Repository. (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)
+The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The data is from Human Activity Recognition Using Smartphone Data Set, UCI Machine Learning Repository (http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones).
 
 
-This repoitory includes the following files:
-============================================
-- 'README.md'
+This repoitory includes the following files
+===========================================
+- 'README.md': The file you are currently reading.
 
 - 'run_analysis.R': This script combines all the training and test dataset including the labels. It extracts only the features with mean and std (standard deviation) and the class labels has already been changed to activity name. (The orignal class is labeled as number.)
 
+- 'CodeBook.md': This file describes the variables, the data, and the transformations performed to clean up the data.
 
-How to run the run_analysis.R:
-==============================
-The run_analysis.R fetches the files from (archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip).
+- 'tidyDataset.txt': The tidy dataset after the clean up process.
+
+
+How to run the run_analysis.R
+=============================
+The run_analysis.R fetches the files from (https://archive.ics.uci.edu/ml/machine-learning-databases/00240/UCI%20HAR%20Dataset.zip).
 
 This script has to place at the same folder with the data folder where you extract your downloaded file.
 
 Folder setup:
 The default folder name is "UCI HAR Dataset". If you name the folder of dataset with different name, you can change the variable "dataFolderName" at the very first beginning of the script.
-Please do not change any files' names or folders' names within the dataset folder. Please keep the folder structure. The folder structure is described as bellow:
+Please do not change any files' names or folders' names within the dataset folder. Please do not change the folder structure, unless you can input the correct folders in the script. The folder structure is described as bellow:
 
 * /UCI HAR Dataset
   * activity_labels.txt
@@ -35,10 +39,10 @@ Please do not change any files' names or folders' names within the dataset folde
     * subject_test.txt
     * X_test.txt
     * y_test.txt
-    * Inertial Signals
+    * /Inertial Signals
            
 The script will also ask you if the dplyr package is installed in your R. If so, you can answer "yes" and the speed of creating the tidy data will be faster. 
 
-Notes:
-======
+Notes
+=====
 - The 'run_analysis.R' provide two methods to clean the dataset, and create a tidy dataset. One method does not require the dplyr library installed. It uses looping to group and average the original data for each subject and each activity. The other method uses dplyr library to create the tidy dataset. Either method is working and it only depends on if the dplyr package has been installed.
