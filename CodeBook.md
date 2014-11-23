@@ -23,7 +23,13 @@ To achieve this process, the run_analysis.R includes five parts.
     * 'test/subject_test.txt': Same with subject_train.txt.
     * 'activity_labels.txt': Links the class labels with their activity name.
     * 'features.txt': List of all features.
+After loading necessary files into R, it converts the data in y_train and y_test to the activity names. Since the original dataset codes the labels as numbers. 
+    
 * Second part: Merge training and test data: This part perform the row combination for:
     * X_train + X_test
     * y_train + y_test
-    *
+    * subject_train + subject_test
+
+* Third part: select only mean and std variables: Because this tidy dataset only extracts the mean and std data of all variables from the original dataset. In order to select the variables with the name mean or std in the variables' names, the grepl function is used with regular expression. ex: grepl("*[Mm]ean|std*", features$V2). The last step of this part is to perform column combination of subject dataset, selected X dataset and activity dataset (y dataset).
+
+* Final part: tidy dataset with the average of each variable and each subject: The run_analysis.R provides two options to perform this task. It is prefered that the dplyr package is installed in the R, since the computation speed is faster and the dplyr package provides very clean and powerful functions to do this task such as group_by() and summarise_each(). If the dplyr package is not installed, the regular codes first divide the dataset chunk by chunk by using the loop function. It subsets the data by subject first, then the activity to perform the average. 

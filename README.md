@@ -45,4 +45,4 @@ The script will also ask you if the dplyr package is installed in your R. If so,
 
 Notes
 =====
-- The 'run_analysis.R' provide two methods to clean the dataset, and create a tidy dataset. One method does not require the dplyr library installed. It uses looping to group and average the original data for each subject and each activity. The other method uses dplyr library to create the tidy dataset. Either method is working and it only depends on if the dplyr package has been installed.
+- The 'run_analysis.R' provides two methods to clean the dataset, and create a tidy dataset. One method does not require the dplyr library installed. It uses looping to group and average the original data for each subject and each activity. The other method uses dplyr library to create the tidy dataset. Either method is working and it only depends on if the dplyr package has been installed.
