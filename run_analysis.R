@@ -40,7 +40,8 @@ colnames(activity_dataset) <- "activity"
 ##########     Third part: select only mean and std variables     ##########
 
 # features with mean and std
-logic_selected_feature <- grepl("*[Mm]ean|std*", features$V2)
+# logic_selected_feature <- grepl("*[Mm]ean|std*", features$V2)
+logic_selected_feature <- grepl("mean[()]|std[()]", features$V2)
 names_selected_feature <- features$V2[logic_selected_feature]
 
 # Select all mean and std columns data
