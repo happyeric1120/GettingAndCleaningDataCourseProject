@@ -49,8 +49,12 @@ These signals were used to estimate variables of the feature vector for each pat
 
 Please note that we only select mean value(mean()) and standard deviation (std()) for all variables, so the Weighted average of the frequency components to obtain a mean frequency (meanFreq()) and angle between two vectors(such as angle(tBodyAccJerkMean),gravityMean)) will not be selected. There are 66 variables plus subject and activity in the tidyDataset.txt (total 68 variables). 
 
-* subject: 1 variable
-* activity: 1 variable
+Subject number and activities:
+* subject: 1 variable, unit: numeric
+* activity: 1 variable, unit: catogorical
+
+
+Accelerometer and gyroscope 3-axial signals:
 * tBodyAcc-XYZ: 3 axes * 2 variables (mean + std) 
 * tGravityAcc-XYZ: 3 axes * 2 variables (mean + std) 
 * tBodyAccJerk-XYZ: 3 axes * 2 variables (mean + std) 
@@ -61,6 +65,11 @@ Please note that we only select mean value(mean()) and standard deviation (std()
 * tBodyAccJerkMag: 2 variables (mean + std) 
 * tBodyGyroMag: 2 variables (mean + std) 
 * tBodyGyroJerkMag: 2 variables (mean + std) 
+
+Unit: Acc: m/s^2 Gyro: degree/s^2
+According to the original README.txt, features are normalized and bounded within [-1,1].
+
+Fast Fourier Transform (FFT) of accelerometer and gyro signals:
 * fBodyAcc-XYZ: 3 axes * 2 variables (mean + std) 
 * fBodyAccJerk-XYZ: 3 axes * 2 variables (mean + std)
 * fBodyGyro-XYZ: 3 axes * 2 variables (mean + std)
@@ -68,3 +77,6 @@ Please note that we only select mean value(mean()) and standard deviation (std()
 * fBodyAccJerkMag: 2 variables (mean + std) 
 * fBodyGyroMag: 2 variables (mean + std) 
 * fBodyGyroJerkMag: 2 variables (mean + std) 
+
+Unit: Acc: m/s^2/Hz Gyro: degree/s^2/Hz
+According to the original README.txt, features are normalized and bounded within [-1,1].

@@ -80,7 +80,8 @@ if (grepl("[Nn][Oo]", dplyrInstalled)) {
     Final_group_data$activity <- sapply(Final_group_data$activity, function(x) x <- activity_labels$V2[x])
     Final_group_data <- Final_group_data[order(Final_group_data$subject, Final_group_data$activity),]
     # write.csv(Final_group_data, file = "resNoLib.csv")
-    write.table(Final_group_data, file = "tidyDataset.txt", row.names = FALSE)
+    # write.table(Final_group_data, file = "tidyDataset.txt", row.names = FALSE)
+    write.table(Final_group_data, file = "tidyDataset.txt", row.names = FALSE, sep=",")
     
     message("New tidy dataset created! (tidyDataset.txt)")
     
@@ -94,7 +95,8 @@ if (grepl("[Nn][Oo]", dplyrInstalled)) {
     test_dataset_tbl_grouped <- group_by(test_dataset_tbl, subject, activity)
     res <- summarise_each(test_dataset_tbl_grouped, funs(mean))
     # write.csv(res, file="result.csv")
-    write.table(res, file = "tidyDataset.txt", row.names = FALSE)
+    # write.table(res, file = "tidyDataset.txt", row.names = FALSE)
+    write.table(res, file = "tidyDataset.txt", row.names = FALSE, sep=",")
     
     message("New tidy dataset created! (tidyDataset.txt)")
     
